@@ -1,0 +1,247 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="{% static 'core/carritosettings/css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'core/carritosettings/css/skeleton.css' %}">
+    <link rel="stylesheet" href="{% static 'core/carritosettings/css/custom.css' %}">
+</head>
+<body>
+<header id="header" class="header">
+    <div class="container">
+        <div class="row">
+            <div class="four columns">
+                <a href="/"><img src="{% static 'core/img/logo.jpg' %}" id="logo"></a>
+            </div>
+            <div class="two columns u-pull-right">
+                <ul>
+                    <li class="submenu">
+                            <img src="{% static 'core/img/cart.png' %}" id="img-carrito" width="60px">
+                            <div id="carrito">
+                                    
+                                    <table id="lista-carrito" class="u-full-width">
+                                        <thead>
+                                            <tr>
+                                                <th>Imagen</th>
+                                                <th>Servicio/Producto</th>
+                                                <th>Precio</th>
+                                                <th>Cantidad</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+
+                                    <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                            </div>
+                    </li>
+                </ul>
+            </div>
+        </div> 
+    </div>
+    </header>
+
+    <div class="barra">
+        <div class="container">
+            <div class="row">
+                    <div class="four columns icono icono1">
+                        <img src="{% static 'core/img/icono1.png' %}" alt="icono">
+                        <p>Mas de 200 productos en stock<br>
+                        Explora  los productos mas recientes</p>
+                    </div>
+                    <div class="four columns icono icono2">
+                        <img src="{% static 'core/img/icono2.png' %}" alt="icono">
+                        <p>Mecanicos expertos <br>
+                        Puedes consultar con ellos en su perfil</p>
+                    </div>
+                    <div class="four columns icono icono3">
+                        <img src="{% static 'core/img/icono3.png' %}" alt="icono">
+                        <p>Mecanica con 40 años de servicios    <br>
+                        que esperas para ser parte de nosotros?</p>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="lista-cursos" class="container">
+        <h1 id="encabezado" class="encabezado">Productos / Servivios</h1>
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="{% static 'core/img/curso1.jpg' %}" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>Farecla</h4>
+                        <p>Limpiador de Neumaticos G3 PRO 500</p>
+                        <img src="{% static 'core/img/estrellas.png' %}">
+                        <p class="precio">$20000  <span class="u-pull-right ">$12490</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar Al Carrito</a>
+                    </div>
+                </div> 
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="{% static 'core/img/curso2.jpg' %}" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>HANKOOK</h4>
+                            <p>Batería De Auto Start Stop HANKOOK EFB SE Q85 65AH 670CCA</p>
+                            <img src="{% static 'core/img/estrellas.png' %}">
+                            <p class="precio">$139990 <span class="u-pull-right ">$115000</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="2">Agregar Al Carrito</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="{% static 'core/img/curso3.jpg' %}" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>PITBUILL</h4>
+                            <p>Traba Rueda PITBULL 10101</p>
+                            <img src="{% static 'core/img/estrellas.png' %}">
+                            <p class="precio">$65000  <span class="u-pull-right ">$55600</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="3">Agregar Al Carrito</a>
+                        </div>
+                    </div> 
+            </div>
+
+        </div> 
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="{% static 'core/img/curso4.jpg' %}" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>BLACK & DECKER</h4>
+                        <p>Hidrolavadora BW16 1600W</p>
+                        <img src="{% static 'core/img/estrellas.png' %}">
+                        <p class="precio">$100000  <span class="u-pull-right ">$90500</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="4">Agregar Al Carrito</a>
+                    </div>
+                </div> 
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="{% static 'core/img/curso5.jpg' %}" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>MEGUIARS</h4>
+                            <p>Protector Tableros 473ml. MEGUIARS</p>
+                            <img src="{% static 'core/img/estrellas.png' %}">
+                            <p class="precio">$15000  <span class="u-pull-right ">$10490</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="5">Agregar Al Carrito</a>
+                        </div>
+                    </div> 
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="{% static 'core/img/curso6.jpg' %}" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>SHELL</h4>
+                            <p>Aceite de Motor Shell Helix HX8 PRO AG Sintetico 5W30 4L</p>
+                            <img src="{% static 'core/img/estrellas.png' %}">
+                            <p class="precio">$50000<span class="u-pull-right ">$44990</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="6">Agregar Al Carrito</a>
+                        </div>
+                    </div> 
+            </div>
+        </div> 
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="{% static 'core/img/curso7.jpg' %}" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>MANTENIMIENTO</h4>
+                        <p>Una mantención preventiva hace que las piezas principales de tu vehículo funcionen perfectamente y un reemplazo oportuno de estos repuestos puede evitar daños colaterales en el funcionamiento eléctrico o mecánico con esto se obtiene un buen funcionamiento de tu vehículo.</p>
+                        <img src="{% static 'core/img/estrellas.png' %}">
+                        <p class="precio">$80000  <span class="u-pull-right ">$65000</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="7">Agregar Al Carrito</a>
+                    </div>
+                </div> 
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="{% static 'core/img/curso8.jpg' %}" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>Diagnostico automotriz Profesional</h4>
+                            <p>Diagnóstico que elaboramos mediante procedimientos adecuados en los cuales plasmamos todos nuestros conocimientos como especialistas en mecánica. Llegamos a él enumerando y comprobando todas las posibles causas que llevan al mal funcionamiento o avería descrita.</p>
+                            <img src="{% static 'core/img/estrellas.png' %}">
+                            <p class="precio">$60000  <span class="u-pull-right ">$45000</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="8">Agregar Al Carrito</a>
+                        </div>
+                    </div> 
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="{% static 'core/img/curso9.jpg' %}" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>DPF / FILTRO DE PARTICULAS</h4>
+                            <p>Realizamos la desactivación, vaciado y limpieza del Filtro de Partículas DPF o FAP y a través de una reprogramación del sistema se elimina el error del vehículo.
+                                Con ésto su automóvil volverá a estar en óptimas condiciones sin el riesgo de volver a tener problemas en su sistema y en pleno cumplimiento de normas medio-ambientales.
+                            </p>
+                            <img src="{% static 'core/img/estrellas.png' %}">
+                            <p class="precio">$150000  <span class="u-pull-right ">$110000</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="9">Agregar Al Carrito</a>
+                        </div>
+                    </div> 
+            </div>
+        </div> 
+        <div class="row">
+                <div class="four columns">
+                    <div class="card">
+                        <img src="{% static 'core/img/curso10.jpg' %}" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>PROTECCION DE VEHICULO</h4>
+                            <p>Mecanica McQueen ofrece un gps capaz de Monitorear y gestionar fácilmente su fuerza móvil de trabajadores con software de rastreo. Logre una visibilidad de 360 grados para reducir los costos y aumentar la productividad. Demo gratuita en directo. Alertas automáticas.</p>
+                            <img src="{% static 'core/img/estrellas.png' %}">
+                            <p class="precio">$190000 <span class="u-pull-right ">$150000</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="10">Agregar Al Carrito</a>
+                        </div>
+                    </div> 
+                </div>
+                <div class="four columns">
+                        <div class="card">
+                            <img src="{% static 'core/img/curso11.jpg' %}" class="imagen-curso u-full-width">
+                            <div class="info-card">
+                                <h4>SERVICIO DE FRENOS</h4>
+                                <p>El sistema de frenos es uno de los principales elementos de seguridad activa del vehículo. Entre sus distintos componentes, los materiales de fricción como los discos y las pastillas requieren un mantenimiento y sustitución periódica ya que están sujetos a desgaste.</p>
+                                <img src="{% static 'core/img/estrellas.png' %}">
+                                <p class="precio">$150000  <span class="u-pull-right ">$125911</span></p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="11">Agregar Al Carrito</a>
+                            </div>
+                        </div> 
+                </div>
+                <div class="four columns">
+                        <div class="card">
+                            <img src="{% static 'core/img/curso12.jpg' %}" class="imagen-curso u-full-width">
+                            <div class="info-card">
+                                <h4>SERVICIOS ADICIONALES</h4>
+                                <p>Servicios adicionales,
+                                    Nuestros servicios no solo son mecánicos por lo cual tenemos una variedad de adicionales que te pueden interesar,
+                                    Servicio de traslado grúa,   
+                                    Servicio de revisión técnica,
+                                    Servicio de desinfección,
+                                    Servicio de traslado de vehículo,
+                                    Servicio de pre compra de tu auto</p>
+                                <img src="{% static 'core/img/estrellas.png' %}">.
+                                <p class="precio">$1000000  <span class="u-pull-right ">$999999</span></p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito " data-id="12">Agregar Al Carrito</a>
+                            </div>
+                        </div> 
+                </div>
+            </div> 
+    </div>  
+
+	<div class="footer-final">
+		<div class="copyw3-agile">
+			<div class="container">
+				<p>&copy; 2022 Mecanica McQueen Todos los derechos de autor reservados | Diseñado por  <a href="www.instagram.com/dantexzxl">MECANICA MCQUEEN</a>
+				</p>
+			</div>
+		</div> 
+	</div>
+
+    <script src="{% static 'core/carritosettings/js/app.js' %}"></script>
+</body>
+</html>

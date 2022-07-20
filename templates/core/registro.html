@@ -1,0 +1,11 @@
+{% load static %}
+{% include "./header.html" %}
+<div class="container">
+    <form action="" method=POST>
+        {% csrf_token %}
+        {{form}}
+    <button class="btn" type="submit"> registrar</button>
+    </form>
+</div>
+Si ya tienes una cuenta ve a <a href="#"> entrar</a>
+{% include "./footer.html" %}

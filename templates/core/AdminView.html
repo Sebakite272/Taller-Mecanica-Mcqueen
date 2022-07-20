@@ -1,0 +1,39 @@
+{% load static %}
+{% include "./headeradmin.html" %}
+	<div class="contact jarallax">
+		<div class="container">
+			<div class="w3-headings-all">
+				<h3>Enviar atención</h3>
+			</div>
+			<div class="contact-grids">
+				<div class="col-md-5 address">
+					<h4>Aquí puedes enviar tus atenciones para que sean revisadas.</h4>
+				</div>
+				<div class="col-md-7 contact-form">
+					<form action="/registrarServicio/" method="POST">{% csrf_token %}
+						<input type="text" id="txtMec" name="txtMec" placeholder="Nombre Mecánico" required>
+						<input type="text" id="txtDiag" name="txtDiag" placeholder="Diagnostico" required>
+						<input type="text" id="txtMat" name="txtMat" placeholder="Materiales" required>
+						<input type="text" id="txtCate" name="txtCate" placeholder="Categoría" required>
+						<input type="submit" value="Enviar">
+					</form>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<table class='table'>
+		<tr>
+		  <th>Nombre del mecánico</th>
+		  <th>Motivo observacion</th>
+		  <th>Mensaje</th>
+		</tr>
+		{% for s in observacion%}
+		<tr>
+		  <td>{{ s.nombre }}</td>
+		  <td>{{ s.motivo }}</td>
+		  <td>{{ s.mensaje }}</td>
+		</tr>
+		{% endfor %}
+	  </table>
+	{% include "./footer.html" %}

@@ -1,0 +1,103 @@
+{% load static %}
+{% include "./header.html" %}
+	<div class="contact jarallax">
+		<div class="container">
+			<div class="w3-headings-all">
+				<h3>Formulario de contacto</h3>
+
+			</div>
+			<div class="contact-grids">
+				<div class="col-md-5 address">
+					<h4>Aclara tus dudas o agenda tus citas aquí</h4>
+					<p class="cnt-p">Contáctanos para lo que necesites y te atendemos en breves. </p>
+					<div class="agileits-social1 top_content">
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-rss"></i></a></li>
+							<li><a href="#"><i class="fa fa-vk"></i></a></li>
+						</ul>
+					</div>
+					<div class="agileits-social-address">
+						<p>Antonio Varas #666, Providencia</p>
+						<p>Numero de telefono : +569 6502 1783</p>
+						<p>Correo : <a href="#">Ejemplo@.com</a></p>
+					</div>
+
+				</div>
+				<div class="col-md-7 contact-form">
+					<form action="/registrarContacto/" method="POST">{% csrf_token %}
+						<input type="text" id="txtNombre" name="txtNombre" placeholder="Nombre" required>
+						<input class="email" id="txtEmail" type="email" name="txtEmail" placeholder="Email" required>
+						<textarea placeholder="Mensaje" id="txtMensaje" name="txtMensaje" required></textarea>
+						<input type="submit" value="Enviar">
+						{{mensaje}}
+					</form>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+
+	<div class="map">
+		<iframe
+			src="https://maps.google.com/maps?q=antonio%20varas%20chile&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+	</div>
+
+	<div class="w3-footer-contact">
+		
+			<div class="clearfix"></div>
+
+			<div class="team gallery-ban" id="team">
+
+				<ul id="flexiselDemo1">
+					<li>
+						<div class="wthree_testimonials_grid_main">
+
+							<img src="{% static 'core/images/f1.png' %}" alt=" " class="img-responsive" />
+
+						</div>
+					</li>
+					<li>
+						<div class="wthree_testimonials_grid_main">
+
+							<img src="{% static 'core/images/f2.png' %}" alt=" " class="img-responsive" />
+
+						</div>
+					</li>
+					<li>
+						<div class="wthree_testimonials_grid_main">
+
+							<img src="{% static 'core/images/f3.png' %}" alt=" " class="img-responsive" />
+
+						</div>
+					</li>
+					<li>
+						<div class="wthree_testimonials_grid_main">
+
+							<img src="{% static 'core/images/f51.png' %}" alt=" " class="img-responsive" />
+
+						</div>
+					</li>
+					<li>
+						<div class="wthree_testimonials_grid_main">
+
+							<img src="{% static 'core/images/f5.png' %}" alt=" " class="img-responsive" />
+
+						</div>
+					</li>
+					<li>
+						<div class="wthree_testimonials_grid_main">
+
+							<img src="{% static 'core/images/f6.png' %}" alt=" " class="img-responsive" />
+
+						</div>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+
+	</div>
+
+	{% include "./footer.html" %}
